@@ -1,22 +1,28 @@
 # vue-tag
 vue中实现tag标签
+### 1，安装scss插件
 ```html
-1，安装scss插件
 npm i node-sass sass-loader -S
-2，安装element-ui
+```
+### 2，安装element-ui
+```html
 npm i element-ui -S
+```
+```js
 main.js中引入element-ui
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
-App.vue
-
+```
+### App.vue
+```html
 <template>
   <div id="app">
     <router-view/>
   </div>
 </template>
- 
+ ```
+ ```css
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -30,8 +36,10 @@ App.vue
   padding: 0;
 }
 </style>
-main.js
+```
 
+### main.js
+```js
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -48,10 +56,12 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
- router文件夹下的index.js
+```
+
+### router文件夹下的index.js
 
 
-
+```js
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -102,12 +112,11 @@ const router = new VueRouter({
 })
  
 export default router
-common文件夹目录
+```
 
-
-
-bus.js
-
+### common文件夹目录
+### bus.js
+```html
 import Vue from 'vue';
 // 使用 Event Bus
 const bus = new Vue();
@@ -127,6 +136,8 @@ header.vue
   </div>
   
 </template>
+```
+```js
 <script>
   import bus from './bus'
   export default{
@@ -141,7 +152,8 @@ header.vue
         bus.$emit('collapse',this.isCollapse)
   }}}
 </script>
- 
+ ```
+ ```css
 <style lang='scss'>
  
 .header {
@@ -177,8 +189,9 @@ header.vue
   }
 }
 </style>
- aside.vue
-
+```
+### aside.vue
+```html
 <template>
   <div class="sidebar">
     <el-menu
@@ -212,6 +225,8 @@ header.vue
    </el-menu>
   </div>
 </template>
+```
+```js
 <script>
 import bus from './bus';
 export default {
@@ -246,6 +261,8 @@ export default {
    }
 }
 </script>
+```
+```css
 <style lang='scss'>
 .sidebar {
   display: flex;
@@ -259,8 +276,10 @@ export default {
   }
 }
 </style>
-tag.vue
+```
 
+### tag.vue
+```html
 <template>
   <div class="_tag">
     <el-scrollbar style="margin-right: 6px;">
@@ -289,6 +308,8 @@ tag.vue
     </el-dropdown>
   </div>
 </template>
+```
+```css
 <style lang="scss">
 ._tag {
   // border: 1px solid green;
@@ -321,7 +342,8 @@ tag.vue
   }
 }
 </style>
- 
+ ```
+ ```js
 <script>
 export default {
   data() {
@@ -406,8 +428,10 @@ export default {
   }
 };
 </script>
-footer.vue
+```
 
+### footer.vue
+```html
 <template>
   <el-footer class="_footer">
     <span class="text">footer@2019</span>
@@ -424,12 +448,10 @@ footer.vue
   }
 }
 </style>
-test文件夹目录
-
-
-
-test1.vue
-
+```
+### test文件夹目录
+### test1.vue
+```html
 <template>
     <div class="test1">这是test1.vue</div>
 </template>
@@ -439,8 +461,9 @@ test1.vue
   flex: auto;
 }
 </style>
-test2.vue
-
+```
+### test2.vue
+```html
 <template>
     <div class="test2">这是test2.vue</div>
 </template>
@@ -450,13 +473,16 @@ test2.vue
   flex: auto;
 }
 </style>
-index.vue
-
+```
+### index.vue
+```html
 <template>
     <div>首页</div>
 </template>
-Home.vue
+```
 
+### Home.vue
+```html
 <template>
  
   <div class="homeContainer">
@@ -476,6 +502,8 @@ Home.vue
   </div>
   
 </template>
+```
+```js
 <script>
 import vHeader from '@/views/common/header';
 import vAside from '@/views/common/aside';
@@ -491,6 +519,8 @@ export default {
   components: { vHeader, vAside,vTag,vFooter}
 };
 </script>
+```
+```css
 <style lang='scss'>
 .homeContainer{
   // border: 1px solid red;
