@@ -15,7 +15,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 ```
 ### 3，项目结构
-<img src="img/1.png" width="700" height="480">
+<img src="/vue-tag/blob/main/img/1.png" width="700" height="480">
 ### App.vue
 ```html
 <template>
