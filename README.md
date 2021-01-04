@@ -14,8 +14,6 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 ```
-### 3，项目结构
-<img src="/vue-tag/blob/main/img/1.png" width="700" height="480">
 ### App.vue
 ```html
 <template>
@@ -581,3 +579,5 @@ export default {
 </style>
 ```
 转载地址：https://blog.csdn.net/qq_40323256/article/details/103004188
+
+项目结构请参考  dom文件
